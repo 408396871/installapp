@@ -11,7 +11,7 @@
 <key>kind</key>
 <string>software-package</string>
 <key>url</key>
-<string>http://192.168.6.31:8080/job/ChinaMobile2/ws/ChinaMobile.ipa</string>
+<string>http://111.20.119.234:2102/downfile/appQR/app/ChinaMobile.ipa</string>
 </dict>
 </array>
 <key>metadata</key>
