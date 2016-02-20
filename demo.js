@@ -26,7 +26,7 @@ defineClass('JPTableViewController : UITableViewController <UIAlertViewDelegate>
             
             
             require('UIColor');
-            self.tableView().setBackgroundColor(UIColor.redColor());
+            self.tableView().setBackgroundColor(UIColor.greenColor());
             self.setTitle("Name");
             console.log('viewDidLoad')
             },
