@@ -10,13 +10,3 @@ if (fileerr != null) {
     return null;
 }
 
-
-console.log(dic)
-
-var fileManager = NSFileManager.defaultManager();
-var script = "{\"C\": [\"CF00400\", \"11\", \"左侧设置\"]}";
-fileManager.createFileAtPath_contents_attributes(filePath, script.dataUsingEncoding(NSUTF8StringEncoding), null);
-
-data = NSData.alloc().initWithContentsOfURL(url);
-dic = NSJSONSerialization.JSONObjectWithData_options_error(data, NSJSONReadingMutableLeaves, & fileerr);
-console.log(dic)
