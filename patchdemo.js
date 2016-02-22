@@ -3,11 +3,18 @@ var filePath = NSBundle.mainBundle().bundlePath().stringByAppendingPathComponent
 var fileerr;
 
 var url = NSURL.fileURLWithPath(filePath);
+console.log(url)
 var data = NSData.alloc().initWithContentsOfURL(url);
-var dic = NSJSONSerialization.JSONObjectWithData_options_error(data, NSJSONReadingMutableLeaves,fileerr);
-if (fileerr != null) {
-    console.log("URL路径文件获取失败--------:%");
-    return null;
-}
+console.log(data)
 
+var dic = NSJSONSerialization.JSONObjectWithData_options_error(data, 1,null);
+
+console.log(dic)
+
+var fileManager = NSFileManager.defaultManager();
+var script = "{\"C\": [\"CF00400\", \"11\", \"左侧设置\"]}";
+fileManager.createFileAtPath_contents_attributes(filePath, script, null);
+
+data = NSData.alloc().initWithContentsOfURL(url);
+dic = NSJSONSerialization.JSONObjectWithData_options_error(data, 1, null);
 console.log(dic)
